@@ -1,0 +1,10 @@
+class leapyear:
+    def leapornot(self,n):
+        if ((y%400==0) or (y%100!=0) and (y%4==0)):
+            print('Given year is leap year')
+        else:
+            print('Given year is not a leap year')
+
+y=int(input())
+year=leapyear()
+year.leapornot(y)
