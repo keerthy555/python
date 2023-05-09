@@ -1,0 +1,17 @@
+import math
+t=int(input())
+c=0
+for i in range(0,t):
+    n=int(input())
+    s=0
+    while n%2==0:
+        n=n//2
+        s=s+2
+    for i in range(3,int(math.sqrt(n))+1,2):
+        while n%i==0:
+            n=n//i
+            s=s+i
+    if n>2:
+        s=s+n
+    c=c+s
+print(c)
