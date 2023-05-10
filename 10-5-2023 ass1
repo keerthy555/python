@@ -1,0 +1,6 @@
+l,r=map(int,input().split())
+n=100001
+pf=[0]*n
+for i in range(l,r+1):
+    pf[i]=pf[i-1]+i
+print(pf[r]+pf[l-1])
