@@ -1,0 +1,7 @@
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        summ=0
+        for i in range(32):
+            summ=(summ<<1)^(n&1)
+            n=n>>1
+        return summ
