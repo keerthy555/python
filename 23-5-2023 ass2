@@ -1,0 +1,17 @@
+from itertools import permutations
+class Solution:
+    def find_permutation(self, S):
+        # Code here
+        p=permutations(S)
+        m=[]
+        for i in list(p):
+            x=list(i)
+            s=''
+            for j in x:
+                s=s+j
+            m.append(s)
+        l=[]
+        for i in m:
+            if i not in l:
+                l.append(i)
+        return sorted(l)
